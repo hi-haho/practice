@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <!-- 포함관계임을 잊으면 안된다. --><!-- 생성자 주입(Constructor injection DI) -->
+    <bean id="myProcess" class="pack.cotroller.MyProcess">
+    	<constructor-arg>
+    	<!-- 
+    		<ref bean="moneyCalc"/>
+    	 -->
+    	 	<ref bean="kbs"/> <!-- 객체 생성 -->
+    	</constructor-arg>
+    </bean>
+    <bean id="moneyCalc" name="kbs,mbc,sbs" class="pack.model.MoneyCalc"/> <!-- inter는 사용할 수 없다 -->
+</beans>
