@@ -26,12 +26,20 @@ public class MyProcess implements Myinter {
 
 	@Override
 	public void showResult() {
+		/*
 		StringBuffer sb = new StringBuffer(); //String 더하기를하면 부하 > 버퍼와 빌더
 		sb.append("10000원 : " + re[0] + "\n"); 
 		sb.append("1000원 : " + re[1] + "\n"); 
 		sb.append("100원 : " + re[2] + "\n"); 
 		sb.append("10원 : " + re[3] + "\n"); 
 		sb.append("1원 : " + re[4] + "\n");
+		System.out.println(sb.toString());
+		*/
+		StringBuilder sb = new StringBuilder();
+		String[] uni = {"만원","천원","백원","십원","일원"};
+		for(int i=0; i<re.length;i++) {
+			sb.append(uni[i] + " : " + re[i] + "\n");
+		}
 		System.out.println(sb.toString());
 	}
 
