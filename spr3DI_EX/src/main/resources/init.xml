@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-       <!-- 포함관계임을 잊으면 안된다. --><!-- 생성자 주입(Constructor injection DI) -->
+       <!-- 포함관계임을 잊으면 안된다. --><!-- 생성자 주입(Constructor injection DI) --><!-- 충돌 방지를 위해 가져오는 값에 xsi를 준다는 의미 (구분을 위해) -->
     <bean id="myImpl" class="pack.controller.MyImpl">
     <!-- java에서 객체를 빈이라고한다. -->
     	<constructor-arg>
     	 	<ref bean="sang"/> <!-- 객체 생성 -->
     	</constructor-arg>
     </bean>
-    <bean id="sangpumImpl" name="sang" class="pack.model.SangpumImpl"/> <!-- inter는 사용할 수 없다 -->
-	<!-- 생성자를 부르는 거야, 싱글톤으로 만들어진다. new하고있는것이다. SangpumImpl에서 sangpumImpl로 인스턴스하는 것 -->
+    <bean id="sangpumImpl" name="sang" class="pack.model.SangpumImpl"/> <!-- 생성자를 부르는 거야, 싱글톤으로 만들어진다. new하고있는것이다. -->
+	<!-- SangpumImpl에서 sangpumImpl로 인스턴스하는 것 -->
 </beans>

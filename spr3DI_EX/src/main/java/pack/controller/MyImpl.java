@@ -36,6 +36,7 @@ public class MyImpl implements MyInter { //extends를 하면 해당 타입만 �
 	@Override
 	public void showData() {
 		StringBuilder sb = new StringBuilder();
+		
 		sb.append("상품명 : " + res[0]);
 		sb.append("\n가격 : " + res[1]);
 		System.out.println(sb.toString());

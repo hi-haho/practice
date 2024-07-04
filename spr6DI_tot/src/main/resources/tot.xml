@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean id="mImpl" class="pack.service.MessageImpl" scope="prototype">
+       <!--  scope="singleton" 이 기본값 -->
+       <!--  scope="prototype" 객체가 매번 만들어 진다. 스프링 컨테이너에 의해 관리되지 않는다. 종료 메서드는 호출되지 않으며 destroy 메서드 호출이 안된다.
+       		힙 메모리에 계속 생성된다
+       -->
+       <!-- constructor injection -->
+       <!--  index 요소를 사용해서 해당 arg의 위치를 정할 수 있다. -->
+       	<constructor-arg index="1" type="java.lang.String">
+       		<value>안녕하세요</value>
+       	</constructor-arg>
+       	<constructor-arg index="0" type="String">
+       		<value>감사해요</value>
+       	</constructor-arg>
+       	<constructor-arg index="2" type="int" value="24"/>
+       	<!-- 
+       	<constructor-arg index="2" type="int">
+       		<value>2024</value>
+       	</constructor-arg>
+       	 -->
+       	<constructor-arg index="3" type="pack.model.MyInfoInter" ref="my"/>
+       	<!-- setter injection -->       	 
+       	<property name="spec">
+       		<value>자바 개발 전문</value>
+       	</property>     	
+       	<property name="fileInter">
+       		<ref bean="oImpl"/>
+       	</property>
+       	
+       </bean>
+       	 <bean id="MyInfo" name="my,hello" class="pack.model.MyInfo"/>
+       	 <bean id="oImpl" class="pack.other.OutFileInterImpl">
+       	 	<property name="filePath" value="c:/work2/message.txt"></property>
+       	 </bean>
+</beans>

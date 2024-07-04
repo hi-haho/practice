@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 충돌 방지를 위해 가져오는 값에 xsi를 준다는 의미 (구분을 위해) -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     <!-- 방법1 : 일반적인 setter 사용 -->
+     <bean name="gugu" class="pack.Gugudan"/>
+     
+     <bean id="our" class="pack.OurProcess"><!-- setter를 부른 것. 이름을 같게 만들어야한다. -->
+     	<property name="name" value="나야"/>
+     	<property name="su" value="7"/>
+     	<property name="gugudan" ref="gugu"/><!-- arg없는 생성자를 부르는 것 --> 
+     </bean> 
+</beans>
