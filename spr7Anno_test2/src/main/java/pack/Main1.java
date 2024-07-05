@@ -1,4 +1,4 @@
-package anno1_auto;
+package pack;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 @Configuration //환경을 여기서 설정하겠다는 의미 (xml이 필요없다. 6 버전)
-@ComponentScan(basePackages ="anno1_auto") //해당 pack를 스캔한다.(인스턴스가 되는 시점)
+@ComponentScan(basePackages ="pack") //해당 pack를 스캔한다.(인스턴스가 되는 시점)
 //스캐너는 한개만 존재하지 않는다. 
 public class Main1 {
 	public static void main(String[] args) {

@@ -6,7 +6,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Main {
 	public static void main(String[] args) {
-		/*ApplicationContext context = new ClassPathXmlApplicationContext("classpath:tot.xml");*/
+		/**/
 		
 		GenericXmlApplicationContext context = new GenericXmlApplicationContext("classpath:tot.xml");
 		System.out.println(" == singleton 확인하세요 ==");

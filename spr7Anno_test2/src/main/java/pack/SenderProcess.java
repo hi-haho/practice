@@ -1,8 +1,10 @@
-package anno1_auto;
+package pack;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
+import anno1_auto.SenderInter;
  //@Component로 만들어도 되지만 단순히 객체를 만드는 것인 경우만 사용
 @Service //service 제공하는 경우 사용하면 가독성이 높아진다. 도메인 레이어이다.
 //Domain layer : 어플리케이션 중심이며 업무처리를 담당 @Service .. 
