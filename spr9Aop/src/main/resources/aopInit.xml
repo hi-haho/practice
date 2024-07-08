@@ -17,7 +17,7 @@
 	<bean id="myadvice" class="aspect.Myadvice"/>
 	
 	<!--
-	proxy를 간접 접근 : 메서드 호출 또는 공통 기능 등을 수행
+	proxy를 간접 접근 : 메서드 호출 또는 공통 기능 등을 수행 (비어있다는 의미)
 	어플리케이션과 AOP 설정을 직접 연계하지 않더라도 유연한 프로그래밍이 가능
 	 -->
 	 <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
