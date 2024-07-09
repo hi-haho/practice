@@ -28,7 +28,7 @@ public class JikwonImpl extends JdbcDaoSupport implements JikwonInter {
 		String sql = "select jikwon_gen,jikwon_name,jikwon_jik"
 				+ " from jikwon inner join gogek"
 				+ " on jikwon.jikwon_no = gogek.gogek_damsano"
-				+ " where gogek_no="+gogek_num+ " AND g.gogek_name = " + gogek_name;
+				+ " where gogek_no="+gogek_num +"and gogek_name = " + gogek_name;
 		
 		if(getJdbcTemplate().query(sql, mapper).isEmpty()) {
 			return null;

@@ -40,7 +40,7 @@ public class JikwonImpl extends JdbcDaoSupport implements JikwonInter {
 	
 	class JikwonMapper implements RowMapper{
 		@Override
-		public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+		public Object mapRow(ResultSet rs, int rowNum) throws SQLException {//rs.next()가 true인 경우 계속 호출된다.즉, 한 행이면 1번 호출/ 5행이면 5번 호출
 			return new JikwonDto(){
 				{ //무명클래스
 					setJikwon_no(rs.getString("jikwon_no"));
