@@ -10,7 +10,7 @@
 
 	<!-- target -->
 	<bean id="targetBean" class="pack.MessageImpl">
-		<property name="name" value="영은언니"></property>
+		<property name="name" value="하하호호"></property>
 	</bean>
 	
 	<!-- advice(Aspect) : target으로 weaving -->

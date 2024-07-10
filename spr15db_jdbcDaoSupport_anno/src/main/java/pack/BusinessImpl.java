@@ -8,8 +8,6 @@ public class BusinessImpl implements BusinessInter {
 	//DB 처리하는 model class를 포함관계로 호출
 	@Autowired
 	private SangpumInter sangpumInter;
-	//s
-	
 	/*
 	@Override
 	public void selectProcess() {

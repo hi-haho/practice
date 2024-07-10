@@ -1,4 +1,4 @@
-package pack;
+package pack.business;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("init.xml");
-		BusinessInter inter = context.getBean("businessImpl",BusinessInter.class);
-		inter.selectProcess();
+		BusinessInter inter = context.getBean("businessImpl", BusinessInter.class);
+		inter.dataAllPrint();
+		inter.groupBuserPrint();
+		inter.topBuserPayPrint();
 	}
+
 }

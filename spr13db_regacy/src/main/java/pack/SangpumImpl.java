@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Repository;
 
-@Repository // 모델 이라는거지, 핵심 로직을 짜겠지
+@Repository
 public class SangpumImpl implements SangpumInter {
 	private Connection conn;
 	private PreparedStatement pstmt;
